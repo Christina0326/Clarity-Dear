@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ClarityKit Custom Styles */
+
+/* Clay Card Effect */
+.clay-card {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+
+.clay-card:hover {
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.15), -12px -12px 24px rgba(255, 255, 255, 0.95);
+}
+
+/* Clay Button Effect */
+.clay-button {
+  background: linear-gradient(145deg, #7CB342, #689F38);
+  box-shadow: 6px 6px 12px rgba(124, 179, 66, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.clay-button:hover {
+  box-shadow: 8px 8px 16px rgba(124, 179, 66, 0.4), -6px -6px 12px rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.clay-button:active {
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+  transform: translateY(0);
+}
+
+/* Lily Bloom Animation */
+@keyframes lilyBloom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.lily-bloom {
+  animation: lilyBloom 6s ease-in-out infinite;
+}
+
+/* Lily Float Animation */
+@keyframes lilyFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.lily-float {
+  animation: lilyFloat 3s ease-in-out infinite;
+}
+
+/* Utility Classes */
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Responsive spacing */
+@media (min-width: 768px) {
+  .md\:ml-72 {
+    margin-left: 18rem;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
