@@ -129,8 +129,8 @@ export default function Patterns() {
       <div className="max-w-6xl flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="animate-spin w-16 h-16 mx-auto mb-4 rounded-full border-4 border-t-transparent"
-               style={{ borderColor: "#7CB342" }} />
-          <p style={{ color: "#7CB342" }}>Loading patterns...</p>
+               style={{ borderColor: "#122B1D" }} />
+          <p style={{ color: "#122B1D" }}>Loading patterns...</p>
         </div>
       </div>
     );
@@ -140,11 +140,11 @@ export default function Patterns() {
     return (
       <div className="max-w-4xl lily-bloom">
         <div className="clay-card p-12 text-center">
-          <AlertTriangle className="w-16 h-16 mx-auto mb-4 lily-float" style={{ color: "#7CB342" }} />
-          <h2 className="text-2xl font-bold mb-3" style={{ color: "#558B2F" }}>
+          <AlertTriangle className="w-16 h-16 mx-auto mb-4 lily-float" style={{ color: "#122B1D" }} />
+          <h2 className="text-2xl font-bold mb-3" style={{ color: "#122B1D" }}>
             No Data Yet
           </h2>
-          <p className="mb-6" style={{ color: "#7CB342" }}>
+          <p className="mb-6" style={{ color: "#122B1D" }}>
             Start journaling and checking in to see patterns emerge over time.
           </p>
         </div>
@@ -154,11 +154,11 @@ export default function Patterns() {
 
   return (
     <div className="max-w-6xl lily-bloom">
-      <div className="clay-card p-8 mb-6">
-        <h1 className="text-3xl font-bold mb-3" style={{ color: "#558B2F" }}>
+      <div className="clay-card p-8 mb-6" style={{ background: "linear-gradient(145deg, #CDDECB, #90B7BF)" }}>
+        <h1 className="text-3xl font-bold mb-3" style={{ color: "#122B1D" }}>
           Pattern Analysis
         </h1>
-        <p className="text-lg" style={{ color: "#7CB342" }}>
+        <p className="text-lg" style={{ color: "#122B1D" }}>
           See the bigger picture. Patterns become clearer over time.
         </p>
       </div>
@@ -172,7 +172,7 @@ export default function Patterns() {
               <div key={idx} className="clay-card p-6" style={{ borderLeft: `4px solid ${insight.color}` }}>
                 <div className="flex items-start gap-4">
                   <Icon className="w-6 h-6 mt-1" style={{ color: insight.color }} />
-                  <p className="flex-1 leading-relaxed" style={{ color: "#558B2F" }}>
+                  <p className="flex-1 leading-relaxed" style={{ color: "#122B1D" }}>
                     {insight.message}
                   </p>
                 </div>
@@ -185,39 +185,39 @@ export default function Patterns() {
       {/* Key Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <div className="clay-card p-6">
-          <div className="text-sm mb-1" style={{ color: "#7CB342" }}>Total Incidents</div>
-          <div className="text-3xl font-bold" style={{ color: "#558B2F" }}>{entries.length}</div>
+          <div className="text-sm mb-1" style={{ color: "#122B1D" }}>Total Incidents</div>
+          <div className="text-3xl font-bold" style={{ color: "#122B1D" }}>{entries.length}</div>
         </div>
         <div className="clay-card p-6">
-          <div className="text-sm mb-1" style={{ color: "#7CB342" }}>Avg Self-Trust</div>
-          <div className="text-3xl font-bold" style={{ color: "#558B2F" }}>
+          <div className="text-sm mb-1" style={{ color: "#122B1D" }}>Avg Self-Trust</div>
+          <div className="text-3xl font-bold" style={{ color: "#122B1D" }}>
             {checkIns.length > 0 ? (checkIns.reduce((sum, c) => sum + c.self_trust_level, 0) / checkIns.length).toFixed(1) : 0}/10
           </div>
         </div>
         <div className="clay-card p-6">
-          <div className="text-sm mb-1" style={{ color: "#7CB342" }}>Recurring</div>
-          <div className="text-3xl font-bold" style={{ color: repeatPercentage > 50 ? "#FF5252" : "#558B2F" }}>
+          <div className="text-sm mb-1" style={{ color: "#122B1D" }}>Recurring</div>
+          <div className="text-3xl font-bold" style={{ color: repeatPercentage > 50 ? "#FF5252" : "#122B1D" }}>
             {repeatPercentage}%
           </div>
         </div>
         <div className="clay-card p-6">
-          <div className="text-sm mb-1" style={{ color: "#7CB342" }}>Check-Ins</div>
-          <div className="text-3xl font-bold" style={{ color: "#558B2F" }}>{checkIns.length}</div>
+          <div className="text-sm mb-1" style={{ color: "#122B1D" }}>Check-Ins</div>
+          <div className="text-3xl font-bold" style={{ color: "#122B1D" }}>{checkIns.length}</div>
         </div>
       </div>
 
       {/* Self-Trust Over Time */}
       {trustData.length > 0 && (
         <div className="clay-card p-6 mb-6">
-          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2" style={{ color: "#558B2F" }}>
+          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2" style={{ color: "#122B1D" }}>
             <TrendingUp className="w-5 h-5" />
             Self-Trust Over Time
           </h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={trustData}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(124, 179, 66, 0.2)" />
-              <XAxis dataKey="date" stroke="#7CB342" />
-              <YAxis domain={[0, 10]} stroke="#7CB342" />
+              <XAxis dataKey="date" stroke="#122B1D" />
+              <YAxis domain={[0, 10]} stroke="#122B1D" />
               <Tooltip
                 contentStyle={{
                   background: "rgba(255, 255, 255, 0.95)",
@@ -229,9 +229,9 @@ export default function Patterns() {
               <Line
                 type="monotone"
                 dataKey="trust"
-                stroke="#7CB342"
+                stroke="#122B1D"
                 strokeWidth={4}
-                dot={{ fill: "#558B2F", r: 7, strokeWidth: 2, stroke: "#FFFFFF" }}
+                dot={{ fill: "#122B1D", r: 7, strokeWidth: 2, stroke: "#FFFFFF" }}
               />
             </LineChart>
           </ResponsiveContainer>
@@ -242,15 +242,15 @@ export default function Patterns() {
         {/* Incident Frequency */}
         {frequencyData.length > 0 && (
           <div className="clay-card p-6">
-            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2" style={{ color: "#558B2F" }}>
+            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2" style={{ color: "#122B1D" }}>
               <Calendar className="w-5 h-5" />
               Incident Frequency
             </h3>
             <ResponsiveContainer width="100%" height={250}>
               <BarChart data={frequencyData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(124, 179, 66, 0.2)" />
-                <XAxis dataKey="month" stroke="#7CB342" />
-                <YAxis stroke="#7CB342" />
+                <XAxis dataKey="month" stroke="#122B1D" />
+                <YAxis stroke="#122B1D" />
                 <Tooltip
                   contentStyle={{
                     background: "rgba(255, 255, 255, 0.95)",
@@ -259,7 +259,7 @@ export default function Patterns() {
                     boxShadow: "8px 8px 16px rgba(124, 179, 66, 0.2)"
                   }}
                 />
-                <Bar dataKey="incidents" fill="#7CB342" radius={[10, 10, 0, 0]} />
+                <Bar dataKey="incidents" fill="#122B1D" radius={[10, 10, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -268,7 +268,7 @@ export default function Patterns() {
         {/* Severity Distribution */}
         {pieData.some(d => d.value > 0) && (
           <div className="clay-card p-6">
-            <h3 className="text-xl font-semibold mb-6" style={{ color: "#558B2F" }}>
+            <h3 className="text-xl font-semibold mb-6" style={{ color: "#122B1D" }}>
               Severity Breakdown
             </h3>
             <ResponsiveContainer width="100%" height={250}>
@@ -295,7 +295,7 @@ export default function Patterns() {
       {/* Top Emotions */}
       {topEmotions.length > 0 && (
         <div className="clay-card p-6 mb-6">
-          <h3 className="text-xl font-semibold mb-6" style={{ color: "#558B2F" }}>
+          <h3 className="text-xl font-semibold mb-6" style={{ color: "#122B1D" }}>
             Most Common Feelings
           </h3>
           <div className="space-y-4">
@@ -304,8 +304,8 @@ export default function Patterns() {
               return (
                 <div key={emotion}>
                   <div className="flex justify-between mb-2">
-                    <span className="capitalize font-medium" style={{ color: "#558B2F" }}>{emotion}</span>
-                    <span style={{ color: "#7CB342" }}>{count} times ({percentage.toFixed(0)}%)</span>
+                    <span className="capitalize font-medium" style={{ color: "#122B1D" }}>{emotion}</span>
+                    <span style={{ color: "#122B1D" }}>{count} times ({percentage.toFixed(0)}%)</span>
                   </div>
                   <div className="h-3 rounded-full overflow-hidden" style={{ background: "rgba(124, 179, 66, 0.2)" }}>
                     <div
@@ -326,7 +326,7 @@ export default function Patterns() {
       {/* Timeline of Incidents */}
       {entries.length > 0 && (
         <div className="clay-card p-6">
-          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2" style={{ color: "#558B2F" }}>
+          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2" style={{ color: "#122B1D" }}>
             <Clock className="w-5 h-5" />
             Timeline of Incidents
           </h3>
@@ -347,14 +347,14 @@ export default function Patterns() {
                   />
                   <div className="flex-1">
                     <div className="flex justify-between items-start mb-1">
-                      <h4 className="font-semibold" style={{ color: "#558B2F" }}>
+                      <h4 className="font-semibold" style={{ color: "#122B1D" }}>
                         {entry.title || "Incident"}
                       </h4>
-                      <span className="text-sm" style={{ color: "#7CB342" }}>
+                      <span className="text-sm" style={{ color: "#122B1D" }}>
                         {new Date(entry.created_date).toLocaleDateString()}
                       </span>
                     </div>
-                    <p className="text-sm line-clamp-2" style={{ color: "#7CB342" }}>
+                    <p className="text-sm line-clamp-2" style={{ color: "#122B1D" }}>
                       {entry.what_happened}
                     </p>
                     {entry.has_happened_before && (

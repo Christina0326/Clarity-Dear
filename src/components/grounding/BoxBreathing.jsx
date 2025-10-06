@@ -35,22 +35,22 @@ export default function BoxBreathing({ onClose }) {
   }, [isActive]);
 
   return (
-    <div className="clay-card p-8 lily-bloom">
+    <div className="clay-card p-8 wave-rise">
       <div className="flex justify-between items-start mb-8">
         <div>
-          <h2 className="text-2xl font-bold mb-2" style={{ color: "#558B2F" }}>
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "#122B1D" }}>
             Box Breathing
           </h2>
-          <p style={{ color: "#7CB342" }}>
+          <p style={{ color: "#122B1D" }}>
             A calming technique used to reduce stress and improve focus
           </p>
         </div>
         <button
           onClick={onClose}
           className="p-2 rounded-lg transition-all"
-          style={{ background: "rgba(124, 179, 66, 0.2)" }}
+          style={{ background: "rgba(230, 165, 140, 0.2)" }}
         >
-          <X className="w-6 h-6" style={{ color: "#558B2F" }} />
+          <X className="w-6 h-6" style={{ color: "#122B1D" }} />
         </button>
       </div>
 
@@ -61,16 +61,16 @@ export default function BoxBreathing({ onClose }) {
           <div
             className="absolute inset-0 border-8 rounded-lg transition-all duration-1000"
             style={{
-              borderColor: "#81D4FA",
-              background: "rgba(129, 212, 250, 0.1)"
+              borderColor: "#537E72",
+              background: "rgba(242, 218, 215, 0.3)"
             }}
           >
             {/* Moving indicator */}
             <div
               className="absolute w-6 h-6 rounded-full transition-all duration-1000 ease-linear"
               style={{
-                background: "#81D4FA",
-                boxShadow: "0 0 20px rgba(129, 212, 250, 0.5)",
+                background: "#537E72",
+                boxShadow: "0 0 20px rgba(192, 121, 115, 0.45)",
                 top: phase === 0 ? `${100 - (5 - count) * 25}%` :
                      phase === 1 ? "0%" :
                      phase === 2 ? `${(5 - count) * 25}%` :
@@ -86,10 +86,10 @@ export default function BoxBreathing({ onClose }) {
 
           {/* Center content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <div className="text-6xl font-bold mb-2" style={{ color: "#81D4FA" }}>
+            <div className="text-6xl font-bold mb-2" style={{ color: "#537E72" }}>
               {count}
             </div>
-            <div className="text-xl font-semibold" style={{ color: "#558B2F" }}>
+            <div className="text-xl font-semibold" style={{ color: "#122B1D" }}>
               {phases[phase].name}
             </div>
           </div>
@@ -98,11 +98,11 @@ export default function BoxBreathing({ onClose }) {
 
       {/* Instruction */}
       <div className="text-center mb-8">
-        <p className="text-lg" style={{ color: "#7CB342" }}>
+        <p className="text-lg" style={{ color: "#122B1D" }}>
           {phases[phase].instruction}
         </p>
         {cycles > 0 && (
-          <p className="text-sm mt-2" style={{ color: "#A8B5A0" }}>
+          <p className="text-sm mt-2" style={{ color: "#122B1D" }}>
             Cycles completed: {cycles}
           </p>
         )}
@@ -126,8 +126,8 @@ export default function BoxBreathing({ onClose }) {
             }}
             className="px-8 py-4 rounded-xl font-medium text-lg transition-all"
             style={{
-              background: "rgba(229, 115, 115, 0.2)",
-              color: "#E57373"
+              background: "rgba(242, 218, 215, 0.35)",
+              color: "#122B1D"
             }}
           >
             Stop
@@ -137,11 +137,11 @@ export default function BoxBreathing({ onClose }) {
 
       {/* Instructions */}
       {!isActive && (
-        <div className="mt-8 clay-card p-6" style={{ background: "rgba(129, 212, 250, 0.1)" }}>
-          <h3 className="font-semibold mb-3" style={{ color: "#558B2F" }}>
+        <div className="mt-8 clay-card p-6" style={{ background: "rgba(230, 165, 140, 0.1)" }}>
+          <h3 className="font-semibold mb-3" style={{ color: "#122B1D" }}>
             How it works:
           </h3>
-          <ol className="space-y-2" style={{ color: "#7CB342" }}>
+          <ol className="space-y-2" style={{ color: "#122B1D" }}>
             <li>1. Inhale for 4 seconds</li>
             <li>2. Hold your breath for 4 seconds</li>
             <li>3. Exhale for 4 seconds</li>

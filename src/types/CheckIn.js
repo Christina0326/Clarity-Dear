@@ -90,10 +90,11 @@ export const MOODS = [
 
 // Mood colors for UI
 export const MOOD_COLORS = {
-  peaceful: "#A5D6A7",
-  hopeful: "#90CAF9",
-  neutral: "#E0E0E0",
-  anxious: "#FFCC80",
-  overwhelmed: "#FFAB91",
-  sad: "#B0BEC5"
+  // aligned to new warm palette
+  peaceful: "#F2DAD7",      // champagne pink (lightest for backgrounds)
+  hopeful: "#C07973",       // rose gold
+  neutral: "#EBD5D1",       // soft champagne tint
+  anxious: "#B7690D",       // philippine gold (alert/cta)
+  overwhelmed: "#7C3730",   // garnet (deep emphasis)
+  sad: "#3F2C23"            // bistre (deep neutral)
 };

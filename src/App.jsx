@@ -5,6 +5,7 @@ import { createPageUrl } from './utils';
 
 // Import pages
 import Home from './pages/Home';
+import CheckIn from './pages/CheckIn';
 import RealityCheck from './pages/RealityCheck';
 import RedFlags from './pages/RedFlags';
 import Journal from './pages/Journal';
@@ -18,6 +19,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path={createPageUrl("Home")} element={<Home />} />
+          <Route path={createPageUrl("CheckIn")} element={<CheckIn />} />
           <Route path={createPageUrl("RealityCheck")} element={<RealityCheck />} />
           <Route path={createPageUrl("RedFlags")} element={<RedFlags />} />
           <Route path={createPageUrl("Journal")} element={<Journal />} />

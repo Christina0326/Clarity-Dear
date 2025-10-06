@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Heart, Flower2, Sparkles, Cloud, Layers } from "lucide-react";
+import { Heart, Wind, Sparkles, Cloud, Layers } from "lucide-react";
 import BreathingExercise from "../components/grounding/BreathingExercise";
 import SensoryGrounding from "../components/grounding/SensoryGrounding";
 import Affirmations from "../components/grounding/Affirmations";
@@ -14,17 +14,17 @@ export default function Grounding() {
     {
       id: "box",
       title: "Box Breathing",
-      description: "4-4-4-4 breathing used by Navy SEALs to stay calm",
+      description: "4-4-4-4 breathing used to steady the nervous system",
       icon: Layers,
-      color: "#81D4FA",
+      color: "#76E2E0",
       component: BoxBreathing
     },
     {
       id: "breathing",
-      title: "Lily Breathing",
+      title: "Guided Breathing",
       description: "Calm your nervous system with guided breathing",
-      icon: Flower2,
-      color: "#FFB6C1",
+      icon: Wind,
+      color: "#2CACAD",
       component: BreathingExercise
     },
     {
@@ -32,23 +32,23 @@ export default function Grounding() {
       title: "5-4-3-2-1 Grounding",
       description: "Ground yourself through the five senses",
       icon: Sparkles,
-      color: "#A5D6A7",
+      color: "#D9F5F0",
       component: SensoryGrounding
     },
     {
       id: "bodyscan",
-      title: "Morning Dew Meditation",
+      title: "Body Scan Meditation",
       description: "Short calming body scan meditation",
       icon: Cloud,
-      color: "#D4E4E8",
+      color: "#90B7BF",
       component: BodyScanMeditation
     },
     {
       id: "feelings",
-      title: "Petal by Petal",
+      title: "Feelings Breakdown",
       description: "Break overwhelming feelings into manageable pieces",
       icon: Heart,
-      color: "#FFD54F",
+      color: "#2CACAD",
       component: FeelingsBreakdown
     },
     {
@@ -56,7 +56,7 @@ export default function Grounding() {
       title: "Affirmations",
       description: "Gentle reminders of your truth",
       icon: Sparkles,
-      color: "#FF8A80",
+      color: "#1C4E47",
       component: Affirmations
     }
   ];
@@ -71,12 +71,12 @@ export default function Grounding() {
   }
 
   return (
-    <div className="max-w-4xl lily-bloom">
-      <div className="clay-card p-8 mb-8">
-        <h1 className="text-3xl font-bold mb-3" style={{ color: "#558B2F" }}>
+    <div className="max-w-4xl wave-rise">
+      <div className="clay-card p-8 mb-8" style={{ background: "linear-gradient(145deg, rgba(118, 226, 224, 0.4), rgba(44, 172, 173, 0.3))" }}>
+        <h1 className="text-3xl font-bold mb-3" style={{ color: "#1C4E47" }}>
           Grounding Exercises
         </h1>
-        <p className="text-lg" style={{ color: "#7CB342" }}>
+        <p className="text-lg" style={{ color: "#024D60" }}>
           When you feel overwhelmed, these exercises can help you return to yourself.
           Take your time, breathe deeply.
         </p>
@@ -92,25 +92,25 @@ export default function Grounding() {
               className="clay-card p-8 text-center transition-all hover:scale-105"
             >
               <div
-                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 lily-float"
+                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 tide-float"
                 style={{
                   background: `linear-gradient(145deg, ${exercise.color}, ${exercise.color}dd)`,
-                  boxShadow: "8px 8px 16px rgba(85, 139, 47, 0.25), -6px -6px 12px rgba(255, 255, 255, 0.7)"
+                  boxShadow: "8px 8px 16px rgba(28, 78, 71, 0.25), -6px -6px 12px rgba(255, 255, 255, 0.7)"
                 }}
               >
                 <Icon className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-3" style={{ color: "#558B2F" }}>
+              <h3 className="text-xl font-semibold mb-3" style={{ color: "#1C4E47" }}>
                 {exercise.title}
               </h3>
-              <p style={{ color: "#7CB342" }}>{exercise.description}</p>
+              <p style={{ color: "#024D60" }}>{exercise.description}</p>
             </button>
           );
         })}
       </div>
 
       {/* Emergency Resources */}
-      <div className="clay-card p-8 mt-8" style={{ background: "linear-gradient(145deg, #FFD54F, #FFB74D)" }}>
+      <div className="clay-card p-8 mt-8" style={{ background: "linear-gradient(145deg, #2CACAD, #76E2E0)" }}>
         <h3 className="text-xl font-semibold mb-4 text-white">
           Need immediate help?
         </h3>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { X, Flower2 } from "lucide-react";
+import { X, Waves } from "lucide-react";
 
 export default function BreathingExercise({ onClose }) {
   const [phase, setPhase] = useState("inhale");
@@ -7,9 +7,9 @@ export default function BreathingExercise({ onClose }) {
   const [isActive, setIsActive] = useState(false);
 
   const phases = {
-    inhale: { duration: 4, next: "hold", text: "Breathe In", color: "#7CB342", bgColor: "rgba(124, 179, 66, 0.3)" },
-    hold: { duration: 4, next: "exhale", text: "Hold", color: "#81D4FA", bgColor: "rgba(129, 212, 250, 0.3)" },
-    exhale: { duration: 6, next: "inhale", text: "Breathe Out", color: "#FFB74D", bgColor: "rgba(255, 183, 77, 0.3)" }
+    inhale: { duration: 4, next: "hold", text: "Breathe In", color: "#1C4E47", bgColor: "rgba(44, 172, 173, 0.3)" },
+    hold: { duration: 4, next: "exhale", text: "Hold", color: "#2CACAD", bgColor: "rgba(118, 226, 224, 0.3)" },
+    exhale: { duration: 6, next: "inhale", text: "Breathe Out", color: "#76E2E0", bgColor: "rgba(217, 245, 240, 0.3)" }
   };
 
   useEffect(() => {
@@ -31,17 +31,17 @@ export default function BreathingExercise({ onClose }) {
   const scale = phase === "inhale" ? 1.5 : phase === "hold" ? 1.5 : 1;
 
   return (
-    <div className="clay-card p-12 text-center lily-bloom relative">
+    <div className="clay-card p-12 text-center wave-rise relative">
       <button
         onClick={onClose}
         className="absolute top-6 right-6 p-2 rounded-full transition-all"
-        style={{ background: "rgba(168, 181, 160, 0.1)" }}
+        style={{ background: "rgba(217, 245, 240, 0.5)" }}
       >
-        <X className="w-6 h-6" style={{ color: "#6B8268" }} />
+        <X className="w-6 h-6" style={{ color: "#1C4E47" }} />
       </button>
 
-      <h2 className="text-3xl font-bold mb-8" style={{ color: "#6B8268" }}>
-        Petal Breathing
+      <h2 className="text-3xl font-bold mb-8" style={{ color: "#1C4E47" }}>
+        Ocean Breathing
       </h2>
 
       <div className="relative w-64 h-64 mx-auto mb-12">
@@ -53,7 +53,7 @@ export default function BreathingExercise({ onClose }) {
             boxShadow: `0 0 80px ${phases[phase].bgColor}, inset 0 0 40px ${phases[phase].bgColor}`
           }}
         >
-          <Flower2
+          <Waves
             className="w-32 h-32 transition-all duration-1000"
             style={{
               color: phases[phase].color,
@@ -64,7 +64,7 @@ export default function BreathingExercise({ onClose }) {
       </div>
 
       <div className="mb-8">
-        <div className="text-4xl font-bold mb-4" style={{ color: "#6B8268" }}>
+        <div className="text-4xl font-bold mb-4" style={{ color: "#1C4E47" }}>
           {phases[phase].text}
         </div>
         <div className="text-6xl font-bold" style={{ color: phases[phase].color }}>
@@ -84,16 +84,16 @@ export default function BreathingExercise({ onClose }) {
           onClick={() => setIsActive(false)}
           className="px-12 py-4 rounded-2xl font-medium text-lg transition-all"
           style={{
-            background: "rgba(168, 181, 160, 0.1)",
-            color: "#6B8268"
+            background: "rgba(217, 245, 240, 0.5)",
+            color: "#1C4E47"
           }}
         >
           Pause
         </button>
       )}
 
-      <p className="mt-8 max-w-md mx-auto leading-relaxed" style={{ color: "#A8B5A0" }}>
-        Follow the lily as it blooms. Breathe with the rhythm.
+      <p className="mt-8 max-w-md mx-auto leading-relaxed" style={{ color: "#024D60" }}>
+        Follow the waves as they flow. Breathe with the rhythm of the ocean.
         Let each breath ground you in this moment.
       </p>
     </div>

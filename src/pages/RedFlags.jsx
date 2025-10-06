@@ -262,10 +262,10 @@ export default function RedFlags() {
   ];
 
   const severities = [
-    { id: "all", name: "All", color: "#7CB342" },
-    { id: "red", name: "Red Flags", color: "#FF5252", icon: AlertTriangle },
-    { id: "amber", name: "Amber Flags", color: "#FFB74D", icon: AlertCircle },
-    { id: "green", name: "Green Flags", color: "#66BB6A", icon: Heart }
+    { id: "all", name: "All", color: "#1C4E47" },
+    { id: "red", name: "Red Flags", color: "#C84B31", icon: AlertTriangle },
+    { id: "amber", name: "Amber Flags", color: "#ECAB53", icon: AlertCircle },
+    { id: "green", name: "Green Flags", color: "#2D6A4F", icon: Heart }
   ];
 
   const filteredFlags = redFlags.filter(flag => {
@@ -277,10 +277,10 @@ export default function RedFlags() {
 
   const getSeverityColor = (severity) => {
     switch(severity) {
-      case 'red': return '#FF5252';
-      case 'amber': return '#FFB74D';
-      case 'green': return '#66BB6A';
-      default: return '#7CB342';
+      case 'red': return '#C84B31';
+      case 'amber': return '#ECAB53';
+      case 'green': return '#2D6A4F';
+      default: return '#1C4E47';
     }
   };
 
@@ -294,39 +294,39 @@ export default function RedFlags() {
   };
 
   return (
-    <div className="max-w-4xl lily-bloom">
-      <div className="clay-card p-8 mb-6">
-        <h1 className="text-3xl font-bold mb-3" style={{ color: "#558B2F" }}>
+    <div className="max-w-4xl wave-rise">
+      <div className="clay-card p-8 mb-6" style={{ background: "linear-gradient(145deg, rgba(118, 226, 224, 0.4), rgba(44, 172, 173, 0.3))" }}>
+        <h1 className="text-3xl font-bold mb-3" style={{ color: "#1C4E47" }}>
           Relationship Patterns Guide
         </h1>
-        <p className="text-lg" style={{ color: "#7CB342" }}>
+        <p className="text-lg" style={{ color: "#024D60" }}>
           Understanding different behaviors helps you recognize what's happening. Knowledge is clarity.
         </p>
       </div>
 
       {/* Severity Key */}
       <div className="clay-card p-6 mb-6">
-        <h3 className="font-semibold mb-4" style={{ color: "#558B2F" }}>Understanding the Levels:</h3>
+        <h3 className="font-semibold mb-4" style={{ color: "#1C4E47" }}>Understanding the Levels:</h3>
         <div className="grid gap-3">
           <div className="flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 mt-0.5" style={{ color: "#FF5252" }} />
+            <AlertTriangle className="w-5 h-5 mt-0.5" style={{ color: "#C84B31" }} />
             <div>
-              <h4 className="font-semibold" style={{ color: "#FF5252" }}>Red Flags</h4>
-              <p className="text-sm" style={{ color: "#7CB342" }}>Serious concerns requiring immediate attention. These are abuse tactics.</p>
+              <h4 className="font-semibold" style={{ color: "#C84B31" }}>Red Flags</h4>
+              <p className="text-sm" style={{ color: "#024D60" }}>Serious concerns requiring immediate attention. These are abuse tactics.</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 mt-0.5" style={{ color: "#FFB74D" }} />
+            <AlertCircle className="w-5 h-5 mt-0.5" style={{ color: "#ECAB53" }} />
             <div>
-              <h4 className="font-semibold" style={{ color: "#FFB74D" }}>Amber Flags</h4>
-              <p className="text-sm" style={{ color: "#7CB342" }}>Warning signs that shouldn't be ignored. May escalate to red flags.</p>
+              <h4 className="font-semibold" style={{ color: "#ECAB53" }}>Amber Flags</h4>
+              <p className="text-sm" style={{ color: "#024D60" }}>Warning signs that shouldn't be ignored. May escalate to red flags.</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <Heart className="w-5 h-5 mt-0.5" style={{ color: "#66BB6A" }} />
+            <Heart className="w-5 h-5 mt-0.5" style={{ color: "#2D6A4F" }} />
             <div>
-              <h4 className="font-semibold" style={{ color: "#66BB6A" }}>Green Flags</h4>
-              <p className="text-sm" style={{ color: "#7CB342" }}>Healthy relationship behaviors. What respect and care actually look like.</p>
+              <h4 className="font-semibold" style={{ color: "#2D6A4F" }}>Green Flags</h4>
+              <p className="text-sm" style={{ color: "#024D60" }}>Healthy relationship behaviors. What respect and care actually look like.</p>
             </div>
           </div>
         </div>
@@ -336,14 +336,14 @@ export default function RedFlags() {
       <div className="clay-card p-6 mb-6">
         <div className="space-y-4">
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: "#7CB342" }} />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: "#1C4E47" }} />
             <input
               type="text"
               placeholder="Search patterns..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="clay-input w-full pl-12 pr-4 py-4 text-lg"
-              style={{ color: "#558B2F" }}
+              style={{ color: "#1C4E47" }}
             />
           </div>
 
@@ -358,10 +358,10 @@ export default function RedFlags() {
                   style={{
                     background: selectedSeverity === sev.id
                       ? `linear-gradient(145deg, ${sev.color}, ${sev.color}dd)`
-                      : "rgba(124, 179, 66, 0.1)",
-                    color: selectedSeverity === sev.id ? "#FFFFFF" : "#558B2F",
+                      : "rgba(217, 245, 240, 0.5)",
+                    color: selectedSeverity === sev.id ? "#FFFFFF" : "#1C4E47",
                     boxShadow: selectedSeverity === sev.id
-                      ? "6px 6px 12px rgba(85, 139, 47, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.6)"
+                      ? "6px 6px 12px rgba(28, 78, 71, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.6)"
                       : "none"
                   }}
                 >
@@ -388,7 +388,7 @@ export default function RedFlags() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <Icon className="w-5 h-5 flex-shrink-0" style={{ color: getSeverityColor(flag.severity) }} />
-                      <h3 className="text-xl font-semibold" style={{ color: "#558B2F" }}>
+                      <h3 className="text-xl font-semibold" style={{ color: "#1C4E47" }}>
                         {flag.title}
                       </h3>
                       <span className="px-3 py-1 rounded-full text-xs font-medium capitalize"
@@ -399,21 +399,21 @@ export default function RedFlags() {
                         {flag.severity === "red" ? "Red Flag" : flag.severity === "amber" ? "Amber Flag" : "Green Flag"}
                       </span>
                     </div>
-                    <p style={{ color: "#7CB342" }}>{flag.brief}</p>
+                    <p style={{ color: "#024D60" }}>{flag.brief}</p>
                   </div>
                   {expandedId === flag.id ? (
-                    <ChevronUp className="w-6 h-6 flex-shrink-0" style={{ color: "#7CB342" }} />
+                    <ChevronUp className="w-6 h-6 flex-shrink-0" style={{ color: "#1C4E47" }} />
                   ) : (
-                    <ChevronDown className="w-6 h-6 flex-shrink-0" style={{ color: "#7CB342" }} />
+                    <ChevronDown className="w-6 h-6 flex-shrink-0" style={{ color: "#1C4E47" }} />
                   )}
                 </div>
               </button>
 
               {expandedId === flag.id && (
-                <div className="px-6 pb-6 space-y-6 lily-bloom">
+                <div className="px-6 pb-6 space-y-6 wave-rise">
                   {/* Examples */}
                   <div>
-                    <h4 className="font-semibold mb-3" style={{ color: "#558B2F" }}>
+                    <h4 className="font-semibold mb-3" style={{ color: "#1C4E47" }}>
                       What it looks like:
                     </h4>
                     <ul className="space-y-2">
@@ -422,8 +422,8 @@ export default function RedFlags() {
                           key={idx}
                           className="clay-card p-3 text-sm"
                           style={{
-                            background: "rgba(255, 248, 240, 0.5)",
-                            color: "#558B2F"
+                            background: "rgba(217, 245, 240, 0.5)",
+                            color: "#024D60"
                           }}
                         >
                           {example}
@@ -434,20 +434,20 @@ export default function RedFlags() {
 
                   {/* Why Harmful or Healthy */}
                   <div>
-                    <h4 className="font-semibold mb-3" style={{ color: "#558B2F" }}>
+                    <h4 className="font-semibold mb-3" style={{ color: "#1C4E47" }}>
                       {flag.severity === 'green' ? 'Why this matters:' : 'Why this is harmful:'}
                     </h4>
-                    <p className="leading-relaxed" style={{ color: "#7CB342" }}>
+                    <p className="leading-relaxed" style={{ color: "#024D60" }}>
                       {flag.severity === 'green' ? flag.why_healthy : flag.why_harmful}
                     </p>
                   </div>
 
                   {/* Response or Pattern */}
                   <div className="clay-card p-4" style={{ background: `linear-gradient(145deg, ${getSeverityColor(flag.severity)}22, ${getSeverityColor(flag.severity)}11)` }}>
-                    <h4 className="font-semibold mb-2" style={{ color: "#558B2F" }}>
+                    <h4 className="font-semibold mb-2" style={{ color: "#1C4E47" }}>
                       {flag.severity === 'green' ? 'What this looks like in practice:' : 'How to respond:'}
                     </h4>
-                    <p className="text-sm leading-relaxed" style={{ color: "#558B2F" }}>
+                    <p className="text-sm leading-relaxed" style={{ color: "#024D60" }}>
                       {flag.severity === 'green' ? flag.healthy_pattern : flag.how_to_respond}
                     </p>
                   </div>
@@ -460,7 +460,7 @@ export default function RedFlags() {
 
       {filteredFlags.length === 0 && (
         <div className="clay-card p-12 text-center">
-          <p className="text-lg" style={{ color: "#7CB342" }}>
+          <p className="text-lg" style={{ color: "#1C4E47" }}>
             No patterns found matching your search.
           </p>
         </div>

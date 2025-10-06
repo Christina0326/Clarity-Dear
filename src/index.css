@@ -2,56 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ClarityKit Custom Styles */
+/* ClarityKit Custom Styles - Ocean Theme */
 
 /* Clay Card Effect */
 .clay-card {
-  background: linear-gradient(145deg, #ffffff, #f0f0f0);
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.9);
+  background: rgba(217, 245, 240, 0.85);
   border-radius: 24px;
+  box-shadow: 10px 10px 20px rgba(2, 77, 96, 0.15),
+             -10px -10px 20px rgba(255, 255, 255, 0.9),
+             inset 3px 3px 6px rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .clay-card:hover {
-  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.15), -12px -12px 24px rgba(255, 255, 255, 0.95);
+  transform: translateY(-3px);
+  box-shadow: 14px 14px 28px rgba(2, 77, 96, 0.2),
+             -10px -10px 20px rgba(255, 255, 255, 0.95),
+             inset 3px 3px 6px rgba(255, 255, 255, 0.8);
 }
 
 /* Clay Button Effect */
 .clay-button {
-  background: linear-gradient(145deg, #7CB342, #689F38);
-  box-shadow: 6px 6px 12px rgba(124, 179, 66, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  transition: all 0.2s ease;
+  background: linear-gradient(145deg, #1C4E47, #024D60);
+  border-radius: 16px;
+  box-shadow: 6px 6px 12px rgba(28, 78, 71, 0.3),
+             -4px -4px 8px rgba(255, 255, 255, 0.7);
+  padding: 12px 24px;
+  color: white;
+  font-weight: 500;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .clay-button:hover {
-  box-shadow: 8px 8px 16px rgba(124, 179, 66, 0.4), -6px -6px 12px rgba(255, 255, 255, 0.7);
   transform: translateY(-2px);
+  background: linear-gradient(145deg, #024D60, #2CACAD);
+  box-shadow: 8px 8px 16px rgba(28, 78, 71, 0.35),
+             -5px -5px 10px rgba(255, 255, 255, 0.8);
 }
 
 .clay-button:active {
-  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 4px 4px 8px rgba(28, 78, 71, 0.4),
+             inset -4px -4px 8px rgba(44, 172, 173, 0.3);
   transform: translateY(0);
 }
 
-/* Lily Bloom Animation */
-@keyframes lilyBloom {
-  0%, 100% {
+/* Wave Rise Animation */
+@keyframes waveRise {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
     transform: scale(1);
   }
-  50% {
-    transform: scale(1.02);
-  }
 }
 
-.lily-bloom {
-  animation: lilyBloom 6s ease-in-out infinite;
+.wave-rise {
+  animation: waveRise 0.6s ease-out;
 }
 
-/* Lily Float Animation */
-@keyframes lilyFloat {
+/* Tide Float Animation */
+@keyframes tideFloat {
   0%, 100% {
     transform: translateY(0px);
   }
@@ -60,8 +75,22 @@
   }
 }
 
-.lily-float {
-  animation: lilyFloat 3s ease-in-out infinite;
+.tide-float {
+  animation: tideFloat 3s ease-in-out infinite;
+}
+
+/* Breathing Circle Animation */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.breathing-circle {
+  animation: breathe 4s ease-in-out infinite;
 }
 
 /* Utility Classes */

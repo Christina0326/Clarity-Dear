@@ -12,10 +12,10 @@ export default function JournalEntryCard({ entry, onEdit, onDelete }) {
       >
         <div className="flex justify-between items-start gap-4">
           <div className="flex-1">
-            <h3 className="text-xl font-semibold mb-2" style={{ color: "#6B8268" }}>
+            <h3 className="text-xl font-semibold mb-2" style={{ color: "#122B1D" }}>
               {entry.title || "Journal Entry"}
             </h3>
-            <div className="flex items-center gap-4 text-sm" style={{ color: "#A8B5A0" }}>
+            <div className="flex items-center gap-4 text-sm" style={{ color: "#122B1D" }}>
               <span className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
                 {new Date(entry.created_date).toLocaleDateString()}
@@ -30,9 +30,9 @@ export default function JournalEntryCard({ entry, onEdit, onDelete }) {
             </div>
           </div>
           {expanded ? (
-            <ChevronUp className="w-6 h-6 flex-shrink-0" style={{ color: "#A8B5A0" }} />
+            <ChevronUp className="w-6 h-6 flex-shrink-0" style={{ color: "#122B1D" }} />
           ) : (
-            <ChevronDown className="w-6 h-6 flex-shrink-0" style={{ color: "#A8B5A0" }} />
+            <ChevronDown className="w-6 h-6 flex-shrink-0" style={{ color: "#122B1D" }} />
           )}
         </div>
       </button>
@@ -40,20 +40,20 @@ export default function JournalEntryCard({ entry, onEdit, onDelete }) {
       {expanded && (
         <div className="px-6 pb-6 space-y-6 lily-bloom">
           <div>
-            <h4 className="font-semibold mb-2" style={{ color: "#6B8268" }}>What happened:</h4>
-            <p className="leading-relaxed" style={{ color: "#A8B5A0" }}>{entry.what_happened}</p>
+            <h4 className="font-semibold mb-2" style={{ color: "#122B1D" }}>What happened:</h4>
+            <p className="leading-relaxed" style={{ color: "#122B1D" }}>{entry.what_happened}</p>
           </div>
 
           {entry.what_they_said && (
             <div className="clay-card p-4" style={{ background: "rgba(245, 230, 211, 0.3)" }}>
-              <h4 className="font-semibold mb-2" style={{ color: "#6B8268" }}>What they said:</h4>
-              <p className="leading-relaxed" style={{ color: "#6B8268" }}>"{entry.what_they_said}"</p>
+              <h4 className="font-semibold mb-2" style={{ color: "#122B1D" }}>What they said:</h4>
+              <p className="leading-relaxed" style={{ color: "#122B1D" }}>"{entry.what_they_said}"</p>
             </div>
           )}
 
           {entry.how_i_felt && entry.how_i_felt.length > 0 && (
             <div>
-              <h4 className="font-semibold mb-2" style={{ color: "#6B8268" }}>How I felt:</h4>
+              <h4 className="font-semibold mb-2" style={{ color: "#122B1D" }}>How I felt:</h4>
               <div className="flex flex-wrap gap-2">
                 {entry.how_i_felt.map(emotion => (
                   <span
@@ -61,7 +61,7 @@ export default function JournalEntryCard({ entry, onEdit, onDelete }) {
                     className="px-3 py-1 rounded-full text-sm capitalize"
                     style={{
                       background: "rgba(232, 168, 154, 0.2)",
-                      color: "#6B8268"
+                      color: "#122B1D"
                     }}
                   >
                     {emotion}
@@ -73,7 +73,7 @@ export default function JournalEntryCard({ entry, onEdit, onDelete }) {
 
           {entry.has_happened_before && (
             <div className="clay-card p-4" style={{ background: "rgba(232, 168, 154, 0.1)" }}>
-              <p className="text-sm font-medium" style={{ color: "#E8A89A" }}>
+              <p className="text-sm font-medium" style={{ color: "#537E72" }}>
                 ⚠️ This is a recurring pattern
               </p>
             </div>
@@ -92,7 +92,7 @@ export default function JournalEntryCard({ entry, onEdit, onDelete }) {
               className="flex-1 py-2 px-4 rounded-2xl font-medium text-sm transition-all"
               style={{
                 background: "rgba(232, 168, 154, 0.2)",
-                color: "#E8A89A"
+                color: "#537E72"
               }}
             >
               <Trash2 className="w-4 h-4 inline mr-2" />

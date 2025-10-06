@@ -42,14 +42,14 @@ export default function Journal() {
   };
 
   return (
-    <div className="max-w-4xl lily-bloom">
-      <div className="clay-card p-8 mb-6">
+    <div className="max-w-4xl wave-rise">
+      <div className="clay-card p-8 mb-6" style={{ background: "linear-gradient(145deg, rgba(118, 226, 224, 0.4), rgba(44, 172, 173, 0.3))" }}>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="text-3xl font-bold mb-2" style={{ color: "#6B8268" }}>
+            <h1 className="text-3xl font-bold mb-2" style={{ color: "#1C4E47" }}>
               Private Journal
             </h1>
-            <p className="text-lg" style={{ color: "#A8B5A0" }}>
+            <p className="text-lg" style={{ color: "#024D60" }}>
               Document your experiences. Your truth matters.
             </p>
           </div>
@@ -79,11 +79,11 @@ export default function Journal() {
 
       {!showForm && entries.length === 0 && (
         <div className="clay-card p-12 text-center">
-          <Calendar className="w-16 h-16 mx-auto mb-4 lily-float" style={{ color: "#A8B5A0" }} />
-          <h3 className="text-xl font-semibold mb-2" style={{ color: "#6B8268" }}>
+          <Calendar className="w-16 h-16 mx-auto mb-4 tide-float" style={{ color: "#2CACAD" }} />
+          <h3 className="text-xl font-semibold mb-2" style={{ color: "#1C4E47" }}>
             Start Your First Entry
           </h3>
-          <p className="mb-6" style={{ color: "#A8B5A0" }}>
+          <p className="mb-6" style={{ color: "#024D60" }}>
             Document what happened. Patterns become clearer over time.
           </p>
           <button

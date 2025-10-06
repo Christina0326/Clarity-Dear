@@ -23,7 +23,7 @@ export default function BodyScanMeditation({ onClose }) {
       name: "Hips & Lower Back",
       instruction: "Feel your hips and lower back. Notice the chair or surface supporting you. Release any tightness.",
       duration: 20,
-      color: "#FFB6C1"
+      color: "#9CC97F"
     },
     {
       name: "Belly & Chest",
@@ -53,13 +53,13 @@ export default function BodyScanMeditation({ onClose }) {
       name: "Face & Head",
       instruction: "Notice your face. Relax your forehead, eyes, cheeks. Feel the weight of your head.",
       duration: 20,
-      color: "#FFB6C1"
+      color: "#9CC97F"
     },
     {
       name: "Whole Body",
       instruction: "Now feel your whole body as one. Notice the calm and presence you've created.",
       duration: 30,
-      color: "#C8D5B9"
+      color: "#90B7BF"
     }
   ];
 
@@ -113,25 +113,25 @@ export default function BodyScanMeditation({ onClose }) {
     <div className="clay-card p-8 lily-bloom">
       <div className="flex justify-between items-start mb-8">
         <div>
-          <h2 className="text-2xl font-bold mb-2" style={{ color: "#558B2F" }}>
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "#122B1D" }}>
             Morning Dew Meditation
           </h2>
-          <p style={{ color: "#7CB342" }}>
+          <p style={{ color: "#122B1D" }}>
             A gentle body scan to release tension and find calm
           </p>
         </div>
         <button
           onClick={onClose}
           className="p-2 rounded-lg transition-all"
-          style={{ background: "rgba(124, 179, 66, 0.2)" }}
+          style={{ background: "rgba(230, 165, 140, 0.2)" }}
         >
-          <X className="w-6 h-6" style={{ color: "#558B2F" }} />
+          <X className="w-6 h-6" style={{ color: "#122B1D" }} />
         </button>
       </div>
 
       {/* Progress */}
       <div className="mb-8">
-        <div className="flex justify-between text-sm mb-2" style={{ color: "#A8B5A0" }}>
+        <div className="flex justify-between text-sm mb-2" style={{ color: "#122B1D" }}>
           <span>Part {currentPart + 1} of {bodyParts.length}</span>
           <span>{timeLeft}s</span>
         </div>
@@ -162,10 +162,10 @@ export default function BodyScanMeditation({ onClose }) {
             {isPlaying ? timeLeft : "•"}
           </div>
         </div>
-        <h3 className="text-2xl font-bold mb-4" style={{ color: "#558B2F" }}>
+        <h3 className="text-2xl font-bold mb-4" style={{ color: "#122B1D" }}>
           {part.name}
         </h3>
-        <p className="text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "#7CB342" }}>
+        <p className="text-lg leading-relaxed max-w-2xl mx-auto" style={{ color: "#122B1D" }}>
           {part.instruction}
         </p>
       </div>
@@ -187,7 +187,7 @@ export default function BodyScanMeditation({ onClose }) {
               className="px-8 py-4 rounded-xl font-medium text-lg flex items-center gap-2 transition-all"
               style={{
                 background: "rgba(168, 181, 160, 0.2)",
-                color: "#558B2F"
+                color: "#122B1D"
               }}
             >
               <Pause className="w-5 h-5" />
@@ -200,7 +200,7 @@ export default function BodyScanMeditation({ onClose }) {
             className="px-6 py-4 rounded-xl font-medium text-lg flex items-center gap-2 transition-all"
             style={{
               background: "rgba(168, 181, 160, 0.2)",
-              color: "#558B2F",
+              color: "#122B1D",
               opacity: currentPart === bodyParts.length - 1 ? 0.5 : 1
             }}
           >
@@ -211,10 +211,10 @@ export default function BodyScanMeditation({ onClose }) {
       ) : (
         <div className="text-center">
           <div className="mb-6">
-            <h3 className="text-2xl font-bold mb-2" style={{ color: "#558B2F" }}>
+            <h3 className="text-2xl font-bold mb-2" style={{ color: "#122B1D" }}>
               Meditation Complete
             </h3>
-            <p style={{ color: "#7CB342" }}>
+            <p style={{ color: "#122B1D" }}>
               Take a moment to notice how you feel now
             </p>
           </div>
@@ -230,7 +230,7 @@ export default function BodyScanMeditation({ onClose }) {
               className="px-8 py-4 rounded-xl font-medium transition-all"
               style={{
                 background: "rgba(168, 181, 160, 0.2)",
-                color: "#558B2F"
+                color: "#122B1D"
               }}
             >
               Close
@@ -242,10 +242,10 @@ export default function BodyScanMeditation({ onClose }) {
       {/* Info */}
       {!isPlaying && currentPart === 0 && (
         <div className="mt-8 clay-card p-6" style={{ background: "rgba(200, 213, 185, 0.2)" }}>
-          <h4 className="font-semibold mb-2" style={{ color: "#558B2F" }}>
+          <h4 className="font-semibold mb-2" style={{ color: "#122B1D" }}>
             Tips for this meditation:
           </h4>
-          <ul className="space-y-2 text-sm" style={{ color: "#7CB342" }}>
+          <ul className="space-y-2 text-sm" style={{ color: "#122B1D" }}>
             <li>• Find a comfortable position, sitting or lying down</li>
             <li>• You can close your eyes or keep a soft gaze</li>
             <li>• There's no "right" way to feel—just notice what's there</li>

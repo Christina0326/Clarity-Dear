@@ -18,71 +18,70 @@ export default function Layout({ children }) {
   ];
 
   return (
-    <div className="min-h-screen" style={{ background: "linear-gradient(135deg, #FFF8F0 0%, #FFE5F0 50%, #E0F2FF 100%)" }}>
+    <div className="min-h-screen" style={{ background: "linear-gradient(135deg, #D9F5F0 0%, #76E2E0 50%, #2CACAD 100%)" }}>
       <style>{`
         :root {
-          --lily-white: #FFFFFF;
-          --soft-cream: #FFF8F0;
-          --sage-stem: #7CB342;
-          --soft-mint: #A5D6A7;
-          --deep-forest: #558B2F;
-          --blush-petal: #FFB6C1;
-          --dew-blue: #81D4FA;
-          --soft-gold: #FFD54F;
-          --warm-amber: #FFB74D;
-          --gentle-coral: #FF8A80;
-          --yellow-flag: #FFF176;
+          --prussian-blue: #1C4E47;
+          --midnight-green: #024D60;
+          --light-sea-green: #2CACAD;
+          --sky-blue: #76E2E0;
+          --water: #D9F5F0;
+          --dark-jungle: #122B1D;
+          --william-hooker: #637E72;
+          --pistachio: #9CC97F;
+          --light-gray: #CDDEC8;
+          --pewter-blue: #90B7BF;
         }
 
         .clay-card {
-          background: rgba(255, 255, 255, 0.95);
+          background: rgba(217, 245, 240, 0.85);
           border-radius: 24px;
           box-shadow:
-            10px 10px 20px rgba(117, 179, 66, 0.15),
-            -10px -10px 20px rgba(255, 255, 255, 0.8),
-            inset 3px 3px 6px rgba(255, 255, 255, 0.6);
+            10px 10px 20px rgba(2, 77, 96, 0.15),
+            -10px -10px 20px rgba(255, 255, 255, 0.9),
+            inset 3px 3px 6px rgba(255, 255, 255, 0.7);
           transition: all 0.3s ease;
+          backdrop-filter: blur(10px);
         }
 
         .clay-card:hover {
           transform: translateY(-3px);
           box-shadow:
-            14px 14px 28px rgba(117, 179, 66, 0.2),
-            -10px -10px 20px rgba(255, 255, 255, 0.9),
-            inset 3px 3px 6px rgba(255, 255, 255, 0.7);
+            14px 14px 28px rgba(2, 77, 96, 0.2),
+            -10px -10px 20px rgba(255, 255, 255, 0.95),
+            inset 3px 3px 6px rgba(255, 255, 255, 0.8);
         }
 
         .clay-button {
-          background: linear-gradient(145deg, #7CB342, #558B2F);
-          border-radius: 20px;
+          background: linear-gradient(145deg, #1C4E47, #024D60);
+          border-radius: 16px;
           box-shadow:
-            8px 8px 16px rgba(85, 139, 47, 0.3),
-            -6px -6px 12px rgba(255, 255, 255, 0.6),
-            inset 2px 2px 4px rgba(255, 255, 255, 0.4);
-          transition: all 0.2s ease;
+            6px 6px 12px rgba(28, 78, 71, 0.3),
+            -4px -4px 8px rgba(255, 255, 255, 0.7);
+          transition: all 0.3s ease;
         }
 
         .clay-button:hover {
-          box-shadow:
-            6px 6px 12px rgba(85, 139, 47, 0.35),
-            -4px -4px 8px rgba(255, 255, 255, 0.7),
-            inset 3px 3px 6px rgba(255, 255, 255, 0.5);
           transform: translateY(-2px);
+          background: linear-gradient(145deg, #024D60, #2CACAD);
+          box-shadow:
+            8px 8px 16px rgba(28, 78, 71, 0.35),
+            -5px -5px 10px rgba(255, 255, 255, 0.8);
         }
 
         .clay-button:active {
           box-shadow:
-            inset 6px 6px 12px rgba(85, 139, 47, 0.3),
-            inset -3px -3px 6px rgba(255, 255, 255, 0.4);
+            inset 6px 6px 12px rgba(28, 78, 71, 0.4),
+            inset -3px -3px 6px rgba(44, 172, 173, 0.3);
           transform: translateY(0);
         }
 
         .clay-input {
-          background: rgba(255, 255, 255, 0.7);
+          background: rgba(217, 245, 240, 0.65);
           border-radius: 18px;
           border: none;
           box-shadow:
-            inset 6px 6px 12px rgba(117, 179, 66, 0.12),
+            inset 6px 6px 12px rgba(2, 77, 96, 0.15),
             inset -3px -3px 6px rgba(255, 255, 255, 0.6);
           transition: all 0.2s ease;
         }
@@ -90,7 +89,7 @@ export default function Layout({ children }) {
         .clay-input:focus {
           outline: none;
           box-shadow:
-            inset 8px 8px 16px rgba(117, 179, 66, 0.18),
+            inset 8px 8px 16px rgba(2, 77, 96, 0.22),
             inset -3px -3px 6px rgba(255, 255, 255, 0.7);
         }
 
@@ -99,27 +98,27 @@ export default function Layout({ children }) {
           50% { transform: translateY(-15px) rotate(2deg); }
         }
 
-        @keyframes bloom {
+        @keyframes waveRise {
           0% { transform: scale(0.7); opacity: 0; }
           50% { transform: scale(1.08); }
           100% { transform: scale(1); opacity: 1; }
         }
 
-        @keyframes petalFall {
+        @keyframes ripple {
           0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
           100% { transform: translateY(100vh) rotate(360deg); opacity: 0.3; }
         }
 
-        .lily-float {
+        .tide-float {
           animation: float 4s ease-in-out infinite;
         }
 
-        .lily-bloom {
-          animation: bloom 0.6s ease-out;
+        .wave-rise {
+          animation: waveRise 0.6s ease-out;
         }
 
-        .lily-svg {
-          filter: drop-shadow(0 4px 8px rgba(124, 179, 66, 0.3));
+        .wave-svg {
+          filter: drop-shadow(0 4px 8px rgba(44, 172, 173, 0.4));
         }
       `}</style>
 
@@ -128,20 +127,20 @@ export default function Layout({ children }) {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link to={createPageUrl("Home")} className="flex items-center gap-3 group">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center lily-float"
+              <div className="w-14 h-14 rounded-full flex items-center justify-center tide-float"
                    style={{
-                     background: "linear-gradient(145deg, #FFB6C1, #FF8A80)",
-                     boxShadow: "6px 6px 12px rgba(255, 138, 128, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.6)"
+                     background: "linear-gradient(145deg, #1C4E47, #024D60)",
+                     boxShadow: "6px 6px 12px rgba(2, 77, 96, 0.3), -4px -4px 8px rgba(255, 255, 255, 0.7)"
                    }}>
-                <svg className="w-8 h-8 lily-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C12 2 8 6 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 6 12 2 12 2Z" fill="white" stroke="white" strokeWidth="2"/>
-                  <path d="M12 14C12 14 8 14 8 18C8 20.2091 9.79086 22 12 22C14.2091 22 16 20.2091 16 18C16 14 12 14 12 14Z" fill="white" stroke="white" strokeWidth="2"/>
-                  <path d="M12 8L8 12L12 14L16 12L12 8Z" fill="rgba(255,255,255,0.7)"/>
+                <svg className="w-8 h-8 wave-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12C2 12 4 8 8 8C12 8 12 12 16 12C20 12 22 8 22 8" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M2 16C2 16 4 12 8 12C12 12 12 16 16 16C20 16 22 12 22 12" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.7"/>
+                  <path d="M2 20C2 20 4 16 8 16C12 16 12 20 16 20C20 20 22 16 22 16" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
                 </svg>
               </div>
               <div>
-                <h1 className="text-xl font-semibold" style={{ color: "#558B2F" }}>Bloom Daily</h1>
-                <p className="text-xs" style={{ color: "#7CB342" }}>Wellness & Reflection</p>
+                <h1 className="text-xl font-semibold" style={{ color: "#1C4E47" }}>ClarityKit</h1>
+                <p className="text-xs" style={{ color: "#024D60" }}>Wellness & Reflection</p>
               </div>
             </Link>
 
@@ -149,12 +148,12 @@ export default function Layout({ children }) {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-full transition-all"
-              style={{ background: "rgba(124, 179, 66, 0.1)" }}
+              style={{ background: "rgba(118, 226, 224, 0.3)" }}
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6" style={{ color: "#558B2F" }} />
+                <X className="w-6 h-6" style={{ color: "#024D60" }} />
               ) : (
-                <Menu className="w-6 h-6" style={{ color: "#558B2F" }} />
+                <Menu className="w-6 h-6" style={{ color: "#024D60" }} />
               )}
             </button>
 
@@ -178,7 +177,7 @@ export default function Layout({ children }) {
             style={{ background: "rgba(0, 0, 0, 0.3)", backdropFilter: "blur(4px)" }}
             onClick={() => setMobileMenuOpen(false)}
           />
-          <div className="absolute top-24 left-4 right-4 clay-card p-4 space-y-2 lily-bloom">
+          <div className="absolute top-24 left-4 right-4 clay-card p-4 space-y-2 wave-rise">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               const Icon = item.icon;
@@ -189,9 +188,9 @@ export default function Layout({ children }) {
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center gap-3 p-4 rounded-2xl transition-all"
                   style={{
-                    background: isActive ? "linear-gradient(145deg, #7CB342, #558B2F)" : "transparent",
-                    color: isActive ? "#FFFFFF" : "#558B2F",
-                    boxShadow: isActive ? "6px 6px 12px rgba(85, 139, 47, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.6)" : "none"
+                    background: isActive ? "linear-gradient(145deg, #1C4E47, #024D60)" : "transparent",
+                    color: isActive ? "#FFFFFF" : "#024D60",
+                    boxShadow: isActive ? "6px 6px 12px rgba(28, 78, 71, 0.35), -3px -3px 6px rgba(255, 255, 255, 0.6)" : "none"
                   }}
                 >
                   <Icon className="w-5 h-5" />
@@ -229,9 +228,9 @@ export default function Layout({ children }) {
                 to={item.path}
                 className="flex items-center gap-3 p-3 rounded-2xl transition-all"
                 style={{
-                  background: isActive ? "linear-gradient(145deg, #7CB342, #558B2F)" : "transparent",
-                  color: isActive ? "#FFFFFF" : "#558B2F",
-                  boxShadow: isActive ? "6px 6px 12px rgba(85, 139, 47, 0.25), -3px -3px 6px rgba(255, 255, 255, 0.6)" : "none"
+                  background: isActive ? "linear-gradient(145deg, #1C4E47, #024D60)" : "transparent",
+                  color: isActive ? "#FFFFFF" : "#024D60",
+                  boxShadow: isActive ? "6px 6px 12px rgba(28, 78, 71, 0.35), -3px -3px 6px rgba(255, 255, 255, 0.6)" : "none"
                 }}
               >
                 <Icon className="w-5 h-5" />
@@ -255,7 +254,7 @@ export default function Layout({ children }) {
                   to={item.path}
                   className="flex flex-col items-center gap-1 px-3 py-2 rounded-xl transition-all"
                   style={{
-                    color: isActive ? "#558B2F" : "#A5D6A7"
+                    color: isActive ? "#2CACAD" : "#1C4E47"
                   }}
                 >
                   <Icon className="w-6 h-6" />

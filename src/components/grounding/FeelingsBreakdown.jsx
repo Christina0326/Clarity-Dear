@@ -10,37 +10,37 @@ export default function FeelingsBreakdown({ onClose }) {
       title: "Name the Feeling",
       prompt: "What's the big overwhelming feeling right now?",
       placeholder: "I feel overwhelmed, anxious, hurt, confused...",
-      color: "#FFD54F"
+      color: "#76E2E0"
     },
     {
       title: "Where Do You Feel It?",
       prompt: "Where in your body do you notice this feeling?",
       placeholder: "Tightness in my chest, knot in my stomach, tension in my shoulders...",
-      color: "#A5D6A7"
+      color: "#2CACAD"
     },
     {
       title: "What Triggered It?",
       prompt: "What happened right before you felt this way?",
       placeholder: "They said something, I saw a text, I remembered...",
-      color: "#81D4FA"
+      color: "#90B7BF"
     },
     {
       title: "What Does It Remind You Of?",
       prompt: "Does this feeling remind you of other times?",
       placeholder: "This reminds me of when...",
-      color: "#FFB6C1"
+      color: "#76E2E0"
     },
     {
       title: "What Do You Need Right Now?",
       prompt: "What would help you feel safer or calmer?",
       placeholder: "Space, someone to talk to, to write, to breathe...",
-      color: "#CE93D8"
+      color: "#2CACAD"
     },
     {
       title: "One Small Step",
       prompt: "What's one tiny thing you can do for yourself right now?",
       placeholder: "Drink water, step outside, text a friend, take 3 deep breaths...",
-      color: "#C8D5B9"
+      color: "#90B7BF"
     }
   ];
 
@@ -64,34 +64,34 @@ export default function FeelingsBreakdown({ onClose }) {
   const step = steps[currentStep];
 
   return (
-    <div className="clay-card p-8 lily-bloom">
+    <div className="clay-card p-8 wave-rise">
       <div className="flex justify-between items-start mb-8">
         <div>
-          <h2 className="text-2xl font-bold mb-2" style={{ color: "#558B2F" }}>
-            Petal by Petal
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "#1C4E47" }}>
+            Wave by Wave
           </h2>
-          <p style={{ color: "#7CB342" }}>
+          <p style={{ color: "#024D60" }}>
             Break down overwhelming feelings into smaller, manageable pieces
           </p>
         </div>
         <button
           onClick={onClose}
           className="p-2 rounded-lg transition-all"
-          style={{ background: "rgba(124, 179, 66, 0.2)" }}
+          style={{ background: "rgba(217, 245, 240, 0.5)" }}
         >
-          <X className="w-6 h-6" style={{ color: "#558B2F" }} />
+          <X className="w-6 h-6" style={{ color: "#1C4E47" }} />
         </button>
       </div>
 
       {/* Progress */}
       <div className="mb-8">
-        <div className="flex justify-between text-sm mb-2" style={{ color: "#A8B5A0" }}>
+        <div className="flex justify-between text-sm mb-2" style={{ color: "#1C4E47" }}>
           <span>Step {currentStep + 1} of {steps.length}</span>
           <span>{Math.round(((currentStep + 1) / steps.length) * 100)}%</span>
         </div>
         <div
           className="h-2 rounded-full overflow-hidden"
-          style={{ background: "rgba(168, 181, 160, 0.2)" }}
+          style={{ background: "rgba(217, 245, 240, 0.3)" }}
         >
           <div
             className="h-full transition-all duration-500 rounded-full"
@@ -106,10 +106,10 @@ export default function FeelingsBreakdown({ onClose }) {
       {/* Icon */}
       <div className="text-center mb-8">
         <div
-          className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 lily-float"
+          className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 tide-float"
           style={{
             background: `linear-gradient(145deg, ${step.color}, ${step.color}dd)`,
-            boxShadow: "8px 8px 16px rgba(85, 139, 47, 0.25), -6px -6px 12px rgba(255, 255, 255, 0.7)"
+            boxShadow: "8px 8px 16px rgba(28, 78, 71, 0.25), -6px -6px 12px rgba(255, 255, 255, 0.7)"
           }}
         >
           {currentStep === steps.length - 1 ? (
@@ -118,10 +118,10 @@ export default function FeelingsBreakdown({ onClose }) {
             <Layers className="w-10 h-10 text-white" />
           )}
         </div>
-        <h3 className="text-2xl font-bold mb-3" style={{ color: "#558B2F" }}>
+        <h3 className="text-2xl font-bold mb-3" style={{ color: "#1C4E47" }}>
           {step.title}
         </h3>
-        <p className="text-lg" style={{ color: "#7CB342" }}>
+        <p className="text-lg" style={{ color: "#024D60" }}>
           {step.prompt}
         </p>
       </div>
@@ -133,7 +133,7 @@ export default function FeelingsBreakdown({ onClose }) {
           onChange={(e) => handleResponseChange(e.target.value)}
           placeholder={step.placeholder}
           className="clay-input w-full px-4 py-4 text-lg min-h-[200px] resize-y"
-          style={{ color: "#558B2F" }}
+          style={{ color: "#1C4E47" }}
           autoFocus
         />
       </div>
@@ -145,8 +145,8 @@ export default function FeelingsBreakdown({ onClose }) {
             onClick={handlePrevious}
             className="px-6 py-3 rounded-xl font-medium transition-all"
             style={{
-              background: "rgba(168, 181, 160, 0.2)",
-              color: "#558B2F"
+              background: "rgba(217, 245, 240, 0.5)",
+              color: "#1C4E47"
             }}
           >
             Previous
@@ -176,19 +176,19 @@ export default function FeelingsBreakdown({ onClose }) {
 
       {/* Info */}
       <div className="mt-8 clay-card p-6" style={{ background: `${step.color}22` }}>
-        <h4 className="font-semibold mb-2" style={{ color: "#558B2F" }}>
+        <h4 className="font-semibold mb-2" style={{ color: "#1C4E47" }}>
           Why this helps:
         </h4>
-        <p className="text-sm leading-relaxed" style={{ color: "#7CB342" }}>
+        <p className="text-sm leading-relaxed" style={{ color: "#024D60" }}>
           When feelings are overwhelming, breaking them down helps you understand what's happening.
-          Like peeling petals from a flower, each layer reveals something new. You're not trying to fix it all at once—just understand it, piece by piece.
+          Like waves in the ocean, each one reveals something new. You're not trying to fix it all at once—just understand it, wave by wave.
         </p>
       </div>
 
       {/* Supportive Message */}
       {currentStep === 0 && (
         <div className="mt-4 text-center">
-          <p className="text-sm italic" style={{ color: "#A8B5A0" }}>
+          <p className="text-sm italic" style={{ color: "#1C4E47" }}>
             💚 Take your time. There are no wrong answers. This is just for you.
           </p>
         </div>

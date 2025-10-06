@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
 const phases = {
-  inhale: { next: "hold1", text: "Breathe In", color: "#C8D5B9" },
-  hold1: { next: "exhale", text: "Hold", color: "#D4E4E8" },
-  exhale: { next: "hold2", text: "Breathe Out", color: "#F4E8E9" },
-  hold2: { next: "inhale", text: "Hold", color: "#F5E6D3" }
+  inhale: { next: "hold1", text: "Breathe In", color: "#90B7BF" },
+  hold1: { next: "exhale", text: "Hold", color: "#90B7BF" },
+  exhale: { next: "hold2", text: "Breathe Out", color: "#CDDECB" },
+  hold2: { next: "inhale", text: "Hold", color: "#90B7BF" }
 };
 
 export default function BoxBreathing({ onClose }) {
@@ -65,14 +65,14 @@ export default function BoxBreathing({ onClose }) {
         className="absolute top-6 right-6 p-2 rounded-full transition-all"
         style={{ background: "rgba(168, 181, 160, 0.1)" }}
       >
-        <X className="w-6 h-6" style={{ color: "#6B8268" }} />
+        <X className="w-6 h-6" style={{ color: "#122B1D" }} />
       </button>
 
-      <h2 className="text-3xl font-bold mb-8" style={{ color: "#6B8268" }}>
+      <h2 className="text-3xl font-bold mb-8" style={{ color: "#122B1D" }}>
         Box Breathing
       </h2>
 
-      <p className="text-sm mb-8" style={{ color: "#A8B5A0" }}>
+      <p className="text-sm mb-8" style={{ color: "#122B1D" }}>
         Follow the movement around the box. 4 seconds each side.
       </p>
 
@@ -98,28 +98,28 @@ export default function BoxBreathing({ onClose }) {
         />
 
         {/* Corner Labels */}
-        <div className="absolute -top-10 left-0 text-sm font-medium" style={{ color: "#C8D5B9" }}>
+        <div className="absolute -top-10 left-0 text-sm font-medium" style={{ color: "#90B7BF" }}>
           Breathe In
         </div>
-        <div className="absolute -top-10 right-0 text-sm font-medium text-right" style={{ color: "#D4E4E8" }}>
+        <div className="absolute -top-10 right-0 text-sm font-medium text-right" style={{ color: "#90B7BF" }}>
           Hold
         </div>
-        <div className="absolute -bottom-10 right-0 text-sm font-medium text-right" style={{ color: "#F4E8E9" }}>
+        <div className="absolute -bottom-10 right-0 text-sm font-medium text-right" style={{ color: "#CDDECB" }}>
           Breathe Out
         </div>
-        <div className="absolute -bottom-10 left-0 text-sm font-medium" style={{ color: "#F5E6D3" }}>
+        <div className="absolute -bottom-10 left-0 text-sm font-medium" style={{ color: "#90B7BF" }}>
           Hold
         </div>
       </div>
 
       <div className="mb-8">
-        <div className="text-4xl font-bold mb-4" style={{ color: "#6B8268" }}>
+        <div className="text-4xl font-bold mb-4" style={{ color: "#122B1D" }}>
           {phases[phase].text}
         </div>
         <div className="text-6xl font-bold" style={{ color: phases[phase].color }}>
           {count}
         </div>
-        <div className="text-sm mt-4" style={{ color: "#A8B5A0" }}>
+        <div className="text-sm mt-4" style={{ color: "#122B1D" }}>
           Cycles completed: {cycles}
         </div>
       </div>
@@ -137,14 +137,14 @@ export default function BoxBreathing({ onClose }) {
           className="px-12 py-4 rounded-2xl font-medium text-lg transition-all"
           style={{
             background: "rgba(168, 181, 160, 0.1)",
-            color: "#6B8268"
+            color: "#122B1D"
           }}
         >
           Pause
         </button>
       )}
 
-      <p className="mt-8 max-w-md mx-auto leading-relaxed text-sm" style={{ color: "#A8B5A0" }}>
+      <p className="mt-8 max-w-md mx-auto leading-relaxed text-sm" style={{ color: "#122B1D" }}>
         Box breathing is used by athletes, performers, and military personnel to reduce stress and improve focus.
         Each side of the box is 4 seconds—equal and steady.
       </p>

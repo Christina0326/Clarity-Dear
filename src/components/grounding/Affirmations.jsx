@@ -44,37 +44,37 @@ export default function Affirmations({ onClose }) {
   };
 
   return (
-    <div className="clay-card p-12 text-center lily-bloom max-w-2xl mx-auto relative">
+    <div className="clay-card p-12 text-center wave-rise max-w-2xl mx-auto relative">
       <button
         onClick={onClose}
         className="absolute top-6 right-6 p-2 rounded-full transition-all"
-        style={{ background: "rgba(124, 179, 66, 0.1)" }}
+        style={{ background: "rgba(217, 245, 240, 0.5)" }}
       >
-        <X className="w-6 h-6" style={{ color: "#558B2F" }} />
+        <X className="w-6 h-6" style={{ color: "#1C4E47" }} />
       </button>
 
-      <h2 className="text-3xl font-bold mb-8" style={{ color: "#558B2F" }}>
+      <h2 className="text-3xl font-bold mb-8" style={{ color: "#1C4E47" }}>
         Affirmations
       </h2>
 
       <div className="mb-12">
         <div
-          className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8 lily-float"
+          className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8 tide-float"
           style={{
-            background: "linear-gradient(145deg, #FFB6C1, #FF8A80)",
-            boxShadow: "10px 10px 20px rgba(255, 138, 128, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.7)"
+            background: "linear-gradient(145deg, #2CACAD, #76E2E0)",
+            boxShadow: "10px 10px 20px rgba(44, 172, 173, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.7)"
           }}
         >
           <Heart className="w-10 h-10 text-white" />
         </div>
 
-        <div className="clay-card p-8 mb-8" style={{ background: "linear-gradient(145deg, #FFF8F0, #FFE5F0)" }}>
-          <p className="text-2xl font-medium leading-relaxed" style={{ color: "#558B2F" }}>
+        <div className="clay-card p-8 mb-8" style={{ background: "linear-gradient(145deg, rgba(118, 226, 224, 0.4), rgba(44, 172, 173, 0.3))" }}>
+          <p className="text-2xl font-medium leading-relaxed" style={{ color: "#1C4E47" }}>
             "{affirmations[currentIndex]}"
           </p>
         </div>
 
-        <p className="text-sm mb-8" style={{ color: "#7CB342" }}>
+        <p className="text-sm mb-8" style={{ color: "#024D60" }}>
           Read this slowly. Let it settle. Breathe it in.
         </p>
       </div>
@@ -87,9 +87,9 @@ export default function Affirmations({ onClose }) {
         Next Affirmation
       </button>
 
-      <div className="mt-12 clay-card p-6" style={{ background: "rgba(165, 214, 167, 0.2)" }}>
-        <p className="text-sm leading-relaxed" style={{ color: "#558B2F" }}>
-          💚 Come back to these whenever you need a reminder.
+      <div className="mt-12 clay-card p-6" style={{ background: "rgba(217, 245, 240, 0.5)" }}>
+        <p className="text-sm leading-relaxed" style={{ color: "#1C4E47" }}>
+          💗 Come back to these whenever you need a reminder.
           Your truth is unchangeable, no matter what anyone says.
         </p>
       </div>
